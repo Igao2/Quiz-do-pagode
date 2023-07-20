@@ -1,3 +1,14 @@
+@media screen and (min-width: 375px) and (orientation:portrait){
+ 
+  .inicio{
+      zoom: 220%;
+  }
+
+}
+.canto{
+ font-size: 22px;
+}
+
 .inicio{
     display: flex;
     align-items: center;
@@ -62,6 +73,20 @@
     left: 140px; 
     width: 90px;
   height: 90px;
+  }
+  .purple{
+    background-color: #9300ff;
+    top: 310px;
+    right: 60px;
+    width: 80px;
+    height: 80px;
+  }
+  .green{
+    background-color: #678170;
+    top: 340px;
+    left: 70px;
+    width: 70px;
+    height: 70px;
   }
   .circle
   {

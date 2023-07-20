@@ -12,6 +12,8 @@
     <div class="circle green-light"></div>
     <div class ="circle yellow"></div>
     <div class = "circle blue-light"></div>
+    <div class = "circle purple"></div>
+    <div class = "circle green"></div>
     <div class="inicio">
     <div class="titulo">
     <h1>Quiz do Pagode!
@@ -29,12 +31,13 @@
 
         var array = ['musica1.html','musica2.html','musica3.html','musica4.html','musica5.html'];
         var numeroaleatorio = Math.floor(Math.random() * 5);
-
+        var count = 0;
         meuBotao.addEventListener("click", function() {
             
             window.location.href = array[numeroaleatorio];
-            delete array[numeroaleatorio];
+            array.splice(numeroaleatorio,1)[0];
             var arraystring = JSON.stringify(array)
+            localStorage.setItem('count',count);
             localStorage.setItem('array',arraystring);
         });
     </script>
