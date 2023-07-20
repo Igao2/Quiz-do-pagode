@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="pt-br">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Quiz do pagode</title>
+</head>
+<body>
+    <div class="circle blue"></div>
+    <div class="circle pink"></div>
+    <div class="circle green-light"></div>
+    <div class ="circle yellow"></div>
+    <div class = "circle blue-light"></div>
+    <div class="inicio">
+    <div class="titulo">
+    <h1>Quiz do Pagode!
+        Você consegue dizer de quem são essas músicas apenas ouvindo a aliteração(repetição de sílabas)?
+    <br><br>
+    
+    <button id="comeco">Vamos começar!</button>
+</h1>
+    </div>
+    </div>
+    
+    <script>
+        
+        const meuBotao = document.getElementById("comeco");
+
+        var array = ['musica1.html','musica2.html','musica3.html','musica4.html','musica5.html'];
+        var numeroaleatorio = Math.floor(Math.random() * 5);
+
+        meuBotao.addEventListener("click", function() {
+            
+            window.location.href = array[numeroaleatorio];
+            delete array[numeroaleatorio];
+            var arraystring = JSON.stringify(array)
+            localStorage.setItem('array',arraystring);
+        });
+    </script>
+</body>
+</html>

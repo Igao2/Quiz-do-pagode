@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="pt-br">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Quiz do pagode</title>
+</head>
+<body>
+    <div class="circle blue"></div>
+    <div class="circle pink"></div>
+    <div class="circle green-light"></div>
+    <div class ="circle yellow"></div>
+    <div class="inicio">
+    <div class="titulo">
+    <h1>Ouça a música e depois escolha a opção correta!
+    <br><br>
+    Quem canta a musica?
+    <button id="comeco">Turma do </button>
+</h1>
+    </div>
+    </div>
+    
+    <script>
+        
+        const meuBotao = document.getElementById("comeco");
+
+        var arraynfuncional =localStorage.getItem('array');
+        var array = JSON.parse(arraynfuncional);
+        var tamanho = array.length;
+        var numeroaleatorio = Math.floor(Math.random() * tamanho);
+
+        meuBotao.addEventListener("click", function() {
+            
+            if(array.length>0)
+            {
+            window.location.href = array[numeroaleatorio];
+            delete array[numeroaleatorio];
+            var arraystring = JSON.stringify(array)
+            localStorage.setItem('array',arraystring);
+            }
+            
+        });
+    </script>
+</body>
+</html>
