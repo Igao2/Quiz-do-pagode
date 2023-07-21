@@ -18,31 +18,55 @@
     <div class="mini">
     <div class="miniplayer">
         <audio id="audioplayer" controls>
-            <source src="E Que Hoje Vai ter Festinha Versão 2.0(instrumental) (320 kbps).mp3" type="audio/mpeg">
+            <source src="fundodequintallala.mp3" type="audio/mpeg">
         </audio>
     </div>
     
     </div>
     <br>
-    Quem canta a musica?
+    <div class="canto">
+        Quem canta a musica?
+        </div>
     <br><br>
-    <button id="comeco">Opção 1</button>
-    <button id="comeco">Opção 2</button>
+    <button class="comeco fundodequintal" id="atitude67">Atitude 67</button>
+    <button class="comeco belo" id="fundodequintal">Fundo de Quintal</button>
 </h1>
     </div>
     </div>
     
     <script>
         
-        const meuBotao = document.getElementById("comeco");
-
+        const fundo = document.getElementById("fundodequintal");
+        const atitude67 = document.getElementById("atitude67");
         var arraynfuncional =localStorage.getItem('array');
         var array = JSON.parse(arraynfuncional);
         var tamanho = array.length;
         var numeroaleatorio = Math.floor(Math.random() * tamanho);
+        var count = localStorage.getItem('count');
 
-        meuBotao.addEventListener("click", function() {
+        fundo.addEventListener("click", function() {
             
+            count++;
+            localStorage.setItem('count',count);
+            if(array.length>=1)
+            {
+            var musicas = localStorage.getItem('musicas');
+            musicas = musicas + 'Fundo de Quintal - O Show tem que continuar'+",";
+            localStorage.setItem('musicas',musicas);
+            var pagina  = array.splice(numeroaleatorio,1)[0];
+            window.location.href = pagina;
+            var arraystring = JSON.stringify(array)
+            localStorage.setItem('array',arraystring);
+            }
+            else{
+                window.location.href = "final.html";
+                var musicas = localStorage.getItem('musicas');
+            musicas = musicas + 'Fundo de Quintal - O Show tem que continuar';
+            localStorage.setItem('musicas',musicas);
+            }
+            
+        });
+        atitude67.addEventListener("click",function(){
             if(array.length>1)
             {
             window.location.href = array[numeroaleatorio];
@@ -50,8 +74,12 @@
             var arraystring = JSON.stringify(array)
             localStorage.setItem('array',arraystring);
             }
-            
-        });
+            else{
+                window.location.href = "final.html";
+            }
+
+        })
+
     </script>
 </body>
 </html>

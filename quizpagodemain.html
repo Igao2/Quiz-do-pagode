@@ -20,7 +20,7 @@
         Você consegue dizer de quem são essas músicas apenas ouvindo a aliteração(repetição de sílabas)?
     <br><br>
     
-    <button id="comeco">Vamos começar!</button>
+    <button class="comeco" id="comeco">Vamos começar!</button>
 </h1>
     </div>
     </div>
@@ -37,6 +37,8 @@
             window.location.href = array[numeroaleatorio];
             array.splice(numeroaleatorio,1)[0];
             var arraystring = JSON.stringify(array)
+            var musicas = "";
+            localStorage.setItem('musicas',musicas);
             localStorage.setItem('count',count);
             localStorage.setItem('array',arraystring);
         });

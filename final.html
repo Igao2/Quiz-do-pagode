@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="pt-br">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Quiz do pagode</title>
+</head>
+<body>
+    
+    <div class="circle blue"></div>
+    <div class="circle pink"></div>
+    <div class="circle green-light"></div>
+    <div class ="circle yellow"></div>
+    <div class="inicio">
+    <div class="titulo">
+    <h1>Seu resultado:
+        <br><br>
+    <div id="resultado" class="resultado">""
+        
+        
+        
+    </div>
+    <button class="tt" id="tt"></button> <button class="zap" id="zap"></button>
+    <br>
+    
+
+    </div>
+    
+    </div>
+    
+        
+    <script>
+        var twitter = document.getElementById("tt");
+        var count = localStorage.getItem('count')
+        twitter.addEventListener("click",function(){
+
+            
+            var siteLink = "Insira o link do seu site aqui";
+            
+            
+            var mensagem = "Eu acertei "+count+" músicas. Quantas você consegue? "+siteLink;
+            
+            
+            var twitterURL = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(mensagem);
+            
+            
+            window.open(twitterURL, "_blank");
+        
+        });
+        var zap = document.getElementById("zap");
+        zap.addEventListener("click",function(){
+            var siteLink = "Insira o link do seu site aqui";
+            
+            
+            var mensagem = "Eu acertei "+count+" músicas. Quantas você consegue? "+siteLink;
+            
+            var whatsappURL = "https://api.whatsapp.com/send?text=" + encodeURIComponent(mensagem);
+            
+            
+            window.open(whatsappURL, "_blank");
+        })
+        
+        document.addEventListener("DOMContentLoaded",function(){
+            var count = localStorage.getItem('count');
+            var musicas = localStorage.getItem('musicas');
+            if(count==1)
+            {
+                document.getElementById("resultado").innerHTML = "Você realmente ouve pagode? Você acertou uma: "+musicas
+            }
+            if(count==2)
+            {
+                document.getElementById("resultado").innerHTML = "Vamo parar de ouvir veigh e ouvir pagode bora? Você acertou duas: "+musicas
+            }
+            if(count==3)
+            {
+                document.getElementById("resultado").innerHTML = "Vai bastante em churrasco né?Você acertou três: "+musicas
+            }
+            if(count==4)
+            {
+                document.getElementById("resultado").innerHTML = "Mumuzinho, é você? Você acertou quatro: "+musicas;
+            }
+            if(count==5)
+            {
+                document.getElementById("resultado").innerHTML = "Você só deixou acontecer naturalmente não é?Você acertou cinco: "+musicas
+            }
+
+
+
+
+        });
+        
+        
+    </script>
+</body>
+</html>

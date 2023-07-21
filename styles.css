@@ -3,7 +3,18 @@
   .inicio{
       zoom: 220%;
   }
-
+  .tt{
+    padding:30px;
+  }
+  .resultado{
+    zoom: 120%;
+    font-size: 17px;
+  }
+  .twitter{
+    top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+  }
 }
 .canto{
  font-size: 22px;
@@ -26,15 +37,15 @@
     height: 150px;
    
 }
-#comeco{
-    font-family: 'Montserrat',sans-serif;
-    font-weight: bold;
-    animation:forwards;
-    background-color: #DCDCDC;
-    border-radius: 13px;
-    border-color: transparent;
-    size: 1000px;
-    padding: 15px 15px;
+.comeco{
+  font-family: 'Montserrat',sans-serif;
+  font-weight: bold;
+  animation:forwards;
+  background-color: #DCDCDC;
+  border-radius: 13px;
+  border-color: transparent;
+  size: 1000px;
+  padding: 15px 15px;
 }
 .blue {
     background-color: #007bff; 
@@ -95,8 +106,27 @@
   position: absolute;
   }
   
-  
-  
-  
+ .tt{
+  border-radius: 14px;
+  background-color: white;
+  background-image: url(Twitter_logo_blue_32.png);
+ background-repeat: no-repeat;
+  padding: 15px;
+  border-color: transparent;
+
+ }
+  .resultado
+  {
+    font-size: 20px;
+  }
+  .zap{
+    border-radius: 14px;
+    background-color: white;
+    background-image: url(logo-whatsapp-verde-icone-ios-android-256.png);
+    background-repeat: no-repeat;
+    padding: 16px;
+    border-color: transparent;
+    background-size: contain;
+  }
   
   
