@@ -52,12 +52,9 @@
             if(array.length>=1)
             {
             var musicas = localStorage.getItem('musicas');
-             if(array.length>1){
-                     musicas = musicas + 'Turma do Pagode - Lancinho'+",";
-                }
-                if(array.length==1){
-                     musicas = musicas + ' Turma do Pagode - Lancinho'
-            }
+             
+                     musicas = musicas + ' Turma do Pagode - Lancinho'+','
+            
             localStorage.setItem('musicas',musicas);
                
                 
