@@ -52,7 +52,15 @@
             if(array.length>=1)
             {
             var musicas = localStorage.getItem('musicas');
-            musicas = musicas + 'Belo - Pura adrenalina'+",";
+            if(array.length>1)
+            {
+                musicas = musicas + 'Belo - Pura adrenalina'+",";
+            }
+                if(array.length==1)
+                {
+                     musicas = musicas + 'Belo - Pura adrenalina'
+                }
+            
             localStorage.setItem('musicas',musicas);
             var pagina  = array.splice(numeroaleatorio,1)[0];
             window.location.href = pagina;
