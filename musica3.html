@@ -54,6 +54,13 @@
             var musicas = localStorage.getItem('musicas');
             musicas = musicas + 'Turma do Pagode - Lancinho'+",";
             localStorage.setItem('musicas',musicas);
+               
+                if(array.length>1){
+                     musicas = musicas + 'Turma do Pagode - Lancinho'+",";
+                }
+                if(array.length==1){
+                     musicas = musicas + ' Turma do Pagode - Lancinho'
+            }
             
             var pagina  = array.splice(numeroaleatorio,1)[0];
             window.location.href = pagina;
