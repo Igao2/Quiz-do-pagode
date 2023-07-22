@@ -66,10 +66,10 @@
             
         });
         arlindo.addEventListener("click",function(){
-            if(array.length>1)
+            if(array.length>=1)
             {
-            window.location.href = array[numeroaleatorio];
-            array.splice(numeroaleatorio,1)[0];
+            var pagina  = array.splice(numeroaleatorio,1)[0];
+            window.location.href = pagina;
             var arraystring = JSON.stringify(array)
             localStorage.setItem('array',arraystring);
             }
