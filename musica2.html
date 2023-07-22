@@ -51,7 +51,12 @@
             if(array.length>=1)
             {
             var musicas = localStorage.getItem('musicas');
-            musicas = musicas + 'Fundo de Quintal - O Show tem que continuar'+",";
+          if(array.length>1){
+                     musicas = musicas + 'Fundo de Quintal - O Show tem que continuar'+",";
+                }
+                if(array.length==1){
+                     musicas = musicas + 'Fundo de Quintal - O Show tem que continuar'
+            }
             localStorage.setItem('musicas',musicas);
             var pagina  = array.splice(numeroaleatorio,1)[0];
             window.location.href = pagina;
