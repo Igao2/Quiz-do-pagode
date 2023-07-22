@@ -50,13 +50,9 @@
             if(array.length>=1)
             {
                 var musicas = localStorage.getItem('musicas');
-                if(array.length>1){
+               
                      musicas = musicas + 'Exaltasamba- Abandonado'+",";
-                }
-                if(array.length==1){
-                     musicas = musicas + 'Exaltasamba- Abandonado'
-            }
-                
+             
            
             localStorage.setItem('musicas',musicas);
             var pagina  = array.splice(numeroaleatorio,1)[0];
