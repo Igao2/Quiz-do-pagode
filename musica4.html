@@ -53,12 +53,10 @@
             var musicas = localStorage.getItem('musicas');
             
                  
-                if(array.length>1){
+               
                      musicas = musicas + 'Zeca Pagodinho - Esta Melodia'+",";
-                }
-                if(array.length==1){
-                     musicas = musicas + 'Zeca Pagodinho - Esta Melodia'
-            }
+                
+            
             localStorage.setItem('musicas',musicas);
             var pagina  = array.splice(numeroaleatorio,1)[0];
             window.location.href = pagina;
