@@ -21,6 +21,7 @@
         
         
     </div>
+    <br>
     <button class="tt" id="tt"></button> <button class="zap" id="zap"></button>
     <br>
     
@@ -64,6 +65,12 @@
         document.addEventListener("DOMContentLoaded",function(){
             var count = localStorage.getItem('count');
             var musicas = localStorage.getItem('musicas');
+            var final = musicas.length;
+
+            if (musicas[final - 1] === ",") 
+            {
+                musicas = musicas.slice(0, final - 1);
+            }
             if(count==0)
             {
                 document.getElementById("resultado").innerHTML = "Minha nossa senhora o impossível aconteceu!! Você errou TODAS"

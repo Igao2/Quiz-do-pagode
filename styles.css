@@ -15,10 +15,11 @@
         left: 50%;
         transform: translateX(-50%);
   }
+  .canto{
+    font-size: 22px;
+   }
 }
-.canto{
- font-size: 22px;
-}
+
 
 .inicio{
     display: flex;
@@ -117,7 +118,7 @@
  }
   .resultado
   {
-    font-size: 20px;
+    font-size: 23px;
   }
   .zap{
     border-radius: 14px;
