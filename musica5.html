@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Quiz do pagode</title>
 </head>
-<body>
+<body id="musica5">
     <div class="circle blue"></div>
     <div class="circle pink"></div>
     <div class="circle green-light"></div>
@@ -34,53 +34,6 @@
     </div>
     </div>
     
-    <script>
-        
-        const exalta = document.getElementById("exalta");
-        const bomgosto = document.getElementById("bomgosto");
-        var arraynfuncional =localStorage.getItem('array');
-        var array = JSON.parse(arraynfuncional);
-        var tamanho = array.length;
-        var numeroaleatorio = Math.floor(Math.random() * tamanho);
-
-        exalta.addEventListener("click", function() {
-            var count = localStorage.getItem('count');
-            count++;
-            localStorage.setItem('count',count);
-            if(array.length>=1)
-            {
-                var musicas = localStorage.getItem('musicas');
-               
-                     musicas = musicas + 'Exaltasamba- Abandonado'+",";
-             
-           
-            localStorage.setItem('musicas',musicas);
-            var pagina  = array.splice(numeroaleatorio,1)[0];
-            window.location.href = pagina;
-            var arraystring = JSON.stringify(array)
-            localStorage.setItem('array',arraystring);
-            }
-            else{
-                window.location.href="final.html";
-                var musicas = localStorage.getItem('musicas');
-            musicas = musicas + 'Exaltasamba- Abandonado';
-            localStorage.setItem('musicas',musicas);
-            }
-            
-        });
-        bomgosto.addEventListener("click",function(){
-            if(array.length>=1)
-            {
-             var pagina  = array.splice(numeroaleatorio,1)[0];
-            window.location.href = pagina;
-            var arraystring = JSON.stringify(array)
-            localStorage.setItem('array',arraystring);
-            }
-            else{
-                window.location.href="final.html";
-            }
-
-        })
-    </script>
+    <script src="scriptpages.js"></script>
 </body>
 </html>

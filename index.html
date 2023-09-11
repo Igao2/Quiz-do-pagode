@@ -4,8 +4,6 @@
     <meta charset="UTF-8" lang="pt-br">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9103827563471309"
-     crossorigin="anonymous"></script>
     <title>Quiz do pagode</title>
 </head>
 <body>
@@ -26,24 +24,6 @@
 </h1>
     </div>
     </div>
-    
-    <script>
-        
-        const meuBotao = document.getElementById("comeco");
-
-        var array = ['musica1.html','musica2.html','musica3.html','musica4.html','musica5.html'];
-        var numeroaleatorio = Math.floor(Math.random() * 5);
-        var count = 0;
-        meuBotao.addEventListener("click", function() {
-            
-            window.location.href = array[numeroaleatorio];
-            array.splice(numeroaleatorio,1)[0];
-            var arraystring = JSON.stringify(array)
-            var musicas = "";
-            localStorage.setItem('musicas',musicas);
-            localStorage.setItem('count',count);
-            localStorage.setItem('array',arraystring);
-        });
-    </script>
+    <script src="scriptinit.js"></script>
 </body>
 </html>

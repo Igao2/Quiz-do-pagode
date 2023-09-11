@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Quiz do pagode</title>
 </head>
-<body>
+<body id="final">
     
     <div class="circle blue"></div>
     <div class="circle pink"></div>
@@ -16,9 +16,7 @@
     <div class="titulo">
     <h1>Seu resultado:
         <br><br>
-    <div id="resultado" class="resultado">""
-        
-        
+    <div id="resultado" class="resultado">
         
     </div>
     <br>
@@ -31,77 +29,6 @@
     </div>
     
         
-    <script>
-        var twitter = document.getElementById("tt");
-        var count = localStorage.getItem('count')
-        twitter.addEventListener("click",function(){
-
-            
-            var siteLink = "https://quizpagode.onrender.com";
-            
-            
-            var mensagem = "Eu acertei "+count+" músicas. Quantas você consegue? "+siteLink;
-            
-            
-            var twitterURL = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(mensagem);
-            
-            
-            window.open(twitterURL, "_blank");
-        
-        });
-        var zap = document.getElementById("zap");
-        zap.addEventListener("click",function(){
-            var siteLink = "https://quizpagode.onrender.com";
-            
-            
-            var mensagem = "Eu acertei "+count+" músicas. Quantas você consegue? "+siteLink;
-            
-            var whatsappURL = "https://api.whatsapp.com/send?text=" + encodeURIComponent(mensagem);
-            
-            
-            window.open(whatsappURL, "_blank");
-        })
-        
-        document.addEventListener("DOMContentLoaded",function(){
-            var count = localStorage.getItem('count');
-            var musicas = localStorage.getItem('musicas');
-            var final = musicas.length;
-
-            if (musicas[final - 1] === ",") 
-            {
-                musicas = musicas.slice(0, final - 1);
-            }
-            if(count==0)
-            {
-                document.getElementById("resultado").innerHTML = "Minha nossa senhora o impossível aconteceu!! Você errou TODAS"
-            }
-            if(count==1)
-            {
-                document.getElementById("resultado").innerHTML = "Você realmente ouve pagode? Você acertou uma: "+musicas
-            }
-            if(count==2)
-            {
-                document.getElementById("resultado").innerHTML = "Bora ouvir mais pagode? Você acertou duas: "+musicas
-            }
-            if(count==3)
-            {
-                document.getElementById("resultado").innerHTML = "Vai bastante em churrasco né? Você acertou três: "+musicas
-            }
-            if(count==4)
-            {
-                document.getElementById("resultado").innerHTML = "Mumuzinho, é você? Você acertou quatro: "+musicas;
-            }
-            if(count==5)
-            {
-                document.getElementById("resultado").innerHTML = "Você só deixou acontecer naturalmente não é? Você acertou cinco: "+musicas
-            }
-
-
-
-
-        });
-        
-        
-    </script>
+    <script src="scriptpages.js"></script>
 </body>
 </html>
